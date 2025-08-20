@@ -139,10 +139,11 @@ public class QRCodeScan : MonoBehaviour
                     gameName = result.Text;
 
                     Transform cam = Camera.main.transform;
-                    Vector3 DescriptionSpawnPosition = cam.position + cam.forward * 0.5f;
+                    
                     Vector3 spawnPosition = cam.position + cam.forward * 0.5f;
 
-                    Vector3 ImageSpawnPosition = new Vector3(spawnPosition.x, spawnPosition.y + 0.6f, spawnPosition.z);
+                    Vector3 DescriptionSpawnPosition = new Vector3(spawnPosition.x + 0.10f, spawnPosition.y, spawnPosition.z);
+                    Vector3 ImageSpawnPosition = new Vector3(spawnPosition.x - 0.15f, spawnPosition.y, spawnPosition.z);
 
                     Image.transform.position = ImageSpawnPosition;
                     BGDescription.transform.position = DescriptionSpawnPosition;
